@@ -200,12 +200,12 @@ def main():
       sys.exit()
 
   application = tornado.web.Application([
-    (r"/", IndexHandler),
-    (r"/" + SCRIPT_PATH, ToolHandler),
-    (r"/([a-fA-F0-9]{2}/[a-fA-F0-9]{38})(\.\w*)?", MyStaticFileHandler, {
+    (r"/i", IndexHandler),
+    (r"/i/" + SCRIPT_PATH, ToolHandler),
+    (r"/i/([a-fA-F0-9]{2}/[a-fA-F0-9]{38})(\.\w*)?", MyStaticFileHandler, {
       'path': options.datadir,
     }),
-    (r"/([a-fA-F0-9/]+(?:\.\w*)?)", HashHandler),
+    (r"/i/([a-fA-F0-9/]+(?:\.\w*)?)", HashHandler),
   ],
     datadir=options.datadir,
     debug=DEBUG,

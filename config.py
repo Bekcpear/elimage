@@ -1,6 +1,6 @@
-DEBUG = True
-DEFAULT_DATA_DIR = '/tmp'
-DEFAULT_PORT = 8888
+DEBUG = False
+DEFAULT_DATA_DIR = '/opt/elimage_vinergy'
+DEFAULT_PORT = 1717
 XHEADERS = True # you may set this to false if not behind another server
 DB = 'elimage.db'
 
